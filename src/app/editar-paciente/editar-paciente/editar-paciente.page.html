@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+   
+    <ion-title  class="center-text"> {{ paciente?.fecha }} {{ paciente?.hora }}</ion-title>
+    <ion-buttons  slot="end">
+      <ion-button [routerLink]="'/paciente'"  >
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+ <ion-card>
+    
+   <ion-label>Fecha de nacimiento: {{ paciente?.fecha }} </ion-label>    
+       
+  </ion-card>
+  <ion-card>
+   <ion-label>Hora: {{ paciente?.hora}} </ion-label>
+  </ion-card>
+  <ion-card>
+    <ion-label>Enfermedad: {{ paciente?.diagnosticoEnfermedad}} </ion-label>         
+   </ion-card>
+  </ion-card>
+</ion-content>

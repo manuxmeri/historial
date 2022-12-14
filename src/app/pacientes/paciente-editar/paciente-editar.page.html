@@ -1,0 +1,69 @@
+<ion-header >
+  <ion-toolbar>
+   
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" color="primary" ></ion-back-button>
+      </ion-buttons>
+   
+  <div>
+    <ion-title class="ion-text-capitalize" color="primary"><h1>{{ paciente.nombre }} {{ paciente.apellido }}</h1></ion-title>
+  </div> 
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu nombre"
+                  [(ngModel)]="paciente.nombre"
+                  name="nombre"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tus apellidos"
+                  [(ngModel)]="paciente.apellido"
+                  name="apellido"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu teléfono"
+                  [(ngModel)]="paciente.direccion"
+                  name="direccion"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de nacimiento</ion-label>
+      <ion-input  type="date"
+                  placeholder="Escribe la fecha de nacimiento"
+                  [(ngModel)]="paciente.fechanaci"
+                  name="fechanaci"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input  type="email"
+                  placeholder="Escribe la edad"
+                  [(ngModel)]="paciente.edad"
+                  name="edad"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-button   type="submit"
+                  expand="block"
+                 
+                  [disabled]="formulario.invalid">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="item item-divider center-text">Agregando  visita</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-label type="text"  #id></ion-label>
+        <ion-label type="text"  #fkPaciente></ion-label>
+    
+        <ion-input type="text" placeholder="Ingrese el diagnostico" #diagnosticoEnfermedad></ion-input>
+        <ion-input type="text" placeholder="Ingrese la fecha" #fecha></ion-input>
+        <ion-input type="text" placeholder="Ingrese la hora" #hora></ion-input>
+       
+        
+      <ion-button color="primary" (click)="agregarNuevaVisita(id, paciente.id , diagnosticoEnfermedad, fecha, hora)" >
+Guardar
+      </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+<ion-toolbar>
+  
+</ion-toolbar>
+
+</ion-content>

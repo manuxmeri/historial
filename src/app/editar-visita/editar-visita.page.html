@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" color="primary" ></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="primary"><h1>Editar visita</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Diagnostico</h2></ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe el diagnostico"
+                  [(ngModel)]="visita.diagnosticoEnfermedad"
+                  name="diagnostico"
+                  required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Fecha</h2></ion-label>
+      <ion-input  type="date"
+                  placeholder="Escribe la dosis"
+                  [(ngModel)]="visita.fecha"
+                  name="fecha"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><h2>Hora</h2></ion-label>
+      <ion-input  type="time"
+                  placeholder="Escribe la hora"
+                  [(ngModel)]="visita.hora"
+                  name="nota"
+                  required>
+      </ion-input>
+    </ion-item>
+ 
+    
+    
+    
+    <ion-button   type="submit"
+                  expand="block"
+                
+                  [disabled]="formulario.invalid">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

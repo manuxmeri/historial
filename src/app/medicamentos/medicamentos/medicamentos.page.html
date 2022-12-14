@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar  >
+    <ion-title ><h1>medicamentos</h1></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  
+    <ion-item *ngFor="let item of medicamentos let i=index">
+    
+      <ion-label name="bag-check-outline">  {{item.nombre}}  </ion-label>
+    
+    <ion-buttons  slot="end">
+      <ion-button [routerLink]="'/medicamentos/' + item.id">
+        <ion-icon name="information-circle-outline"></ion-icon>
+
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-buttons  side="start">
+      <ion-button color="primary" (click)="borrar(item,i)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons >
+   
+  
+    
+  </ion-item>
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarMedicamento()">
+      <ion-icon name="bag-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

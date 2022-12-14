@@ -1,0 +1,52 @@
+.center-text {
+    text-align: center;
+ }
+ .imagen{
+    width: 250px;
+    height: 255px;
+    margin: auto;
+    margin-top: 20px;
+ }
+ ion-card{
+   width: 100%;
+  border: none;
+  margin: 0;
+  padding: 38px 30px;
+  font-size: 18px;
+  font-weight: 200;
+  outline: none;
+  background: none;
+  --background: #216966;
+ }
+ div{
+   background: rgb(253, 252, 204);
+    color: #fff;
+    padding: 30px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+ }
+ ion-content{
+   --background: #ffffff;
+ }
+ h1 {
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: 700;
+   letter-spacing: 7px;
+   text-align: center;
+   text-transform: uppercase;
+ }
+ h2 {
+   color: #ffffff;
+   font-size: 12px;
+   
+   letter-spacing: 1px;
+   text-align: center;
+   text-transform: uppercase;
+ }
+ ion-toolbar {
+    --background: #216966;
+  
+  }
+ 

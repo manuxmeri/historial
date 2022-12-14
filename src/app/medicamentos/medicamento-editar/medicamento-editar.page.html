@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" ></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="primary"><h1>{{ medicamento.nombre }}</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu nombre"
+                  [(ngModel)]="medicamento.nombre"
+                  name="nombre"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Capacidad</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tus apellidos"
+                  [(ngModel)]="medicamento.capacidad"
+                  name="capacidad"
+                  required>
+      </ion-input>
+    </ion-item>
+ 
+  
+
+    <ion-button   type="submit"
+                  expand="block"
+                 
+                  [disabled]="formulario.invalid">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

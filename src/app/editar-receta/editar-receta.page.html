@@ -1,0 +1,59 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" color="primary" ></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="primary"><h1>Editar receta</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+  
+    <ion-item>
+      <ion-label position="floating">Fecha de la receta</ion-label>
+      <ion-input  type="date"
+                  placeholder="Escribe la fecha"
+                  [(ngModel)]="receta.fechaReceta"
+                  name="fecha"
+                  required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Dosis</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe la dosis"
+                  [(ngModel)]="receta.dosis"
+                  name="dosis"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nota</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe la nota"
+                  [(ngModel)]="receta.nota"
+                  name="nota"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Medicamentos</ion-label>
+      <ion-select [(ngModel)]="receta.fkMedicamento" name="fkMedicamento">
+        <ion-select-option *ngFor="let medicamento of medicamentos" [value]="medicamento.id">{{ medicamento.nombre }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    
+    
+    <ion-button   type="submit"
+                  expand="block"
+                 
+                  [disabled]="formulario.invalid">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

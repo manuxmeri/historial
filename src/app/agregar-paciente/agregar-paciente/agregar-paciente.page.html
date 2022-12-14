@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="item item-divider center-text"><h1>Agregar paciente</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-label type="text" style="color:#000 "  #id></ion-label>
+        <ion-input type="text" style="color:#000 "  placeholder="Ingrese el nombre" #nombre></ion-input>
+        <ion-input type="text" style="color:#000 "  placeholder="Ingrese los  apellidos" #apellido></ion-input>
+        <ion-input type="text" style="color:#000 "  placeholder="Ingrese la dirección" #direccion></ion-input>
+        <ion-input type="date" style="color:#000 "  placeholder="Ingrese la fecha de nacimiento" #fechanaci></ion-input>
+        <ion-input type="text" style="color:#000 "  placeholder="Ingrese la edad" #edad></ion-input>
+       
+        
+      <ion-button  (click)="agregarNuevoPaciente(id,nombre, apellido, direccion, fechanaci, edad)" >
+Guardar
+      </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+
+</ion-content>

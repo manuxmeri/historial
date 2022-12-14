@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar  >
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+   
+    <ion-title  class="center-text"> {{ medicamento?.nombre }} </ion-title>
+    <ion-buttons  slot="end">
+      <ion-button  (click)="editarMedicamento(medicamento)">
+        <ion-icon name="pencil-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-avatar class="imagen"><img src="../../../assets/medicamento2.jpg" ></ion-avatar>
+  </div>
+<ion-card>
+  
+ <ion-card>
+    
+   <ion-label>Nombre: {{ medicamento?.nombre }} </ion-label>    
+       
+  </ion-card>
+  <ion-card>
+   <ion-label>Capacidad: {{ medicamento?.capacidad}} </ion-label>
+  </ion-card>
+ 
+  </ion-card>
+</ion-content>

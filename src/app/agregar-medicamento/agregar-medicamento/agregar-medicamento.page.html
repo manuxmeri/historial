@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/medicamentos"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="item item-divider center-text"><h1>Agregar medicamento</h1></ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-label type="text"  #id></ion-label>
+        <ion-input type="text" placeholder="Ingrese el nombre del medicamento" #nombre></ion-input>
+        <ion-input type="text" placeholder="Ingrese la capacidad del medicamento" #capacidad></ion-input>
+      
+      
+        
+      <ion-button  (click)="agregarNuevoMedicamento(id, nombre,capacidad)" >
+Guardar
+      </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+
+</ion-content>

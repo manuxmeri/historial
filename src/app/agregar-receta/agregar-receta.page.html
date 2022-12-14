@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="item item-divider center-text"><h1>Agregar  Receta </h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-label type="text"  #id></ion-label>
+        <ion-input style="color:#000 " type="date" placeholder="Ingrese el fechaReceta" #fechaReceta></ion-input>
+        <ion-input style="color:#000 "  type="text" placeholder="Ingrese la  dosis" #dosis></ion-input>
+        <ion-input style="color:#000 " type="text" placeholder="Ingrese una nota" #nota></ion-input>
+        <ion-label type="text"  #fkPaciente></ion-label>
+        <ion-item>
+          <ion-label>Medicamentos</ion-label>
+          <ion-select [(ngModel)]="receta.fkMedicamento" #fkMedicamento>
+            <ion-select-option *ngFor="let medicamento of medicamentos" [value]="medicamento.id">{{ medicamento.nombre }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        
+       
+        
+      <ion-button  (click)="agregarNuevoPaciente(id,fechaReceta, dosis, nota, fkPaciente, fkMedicamento)" >
+Guardar
+      </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+
+</ion-content>
+
+   
+    
+    
+    

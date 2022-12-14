@@ -1,0 +1,38 @@
+.cla {
+    margin-bottom: solid #6bc4bf;
+    margin-left: auto;
+    margin-right: auto  #ffffff;
+    --background: #ffffff;
+}
+.divpadre{
+    text-align:center;
+}
+    ion-toolbar {
+        --background: #336180;
+    
+      }
+      ion-button{
+        margin-top: 15px;
+        --background: #ffffff;
+      }
+      h1{
+        --color: #fafafa;
+        font-size: 15px;
+        text-align:center;
+        letter-spacing: 1px;
+       
+        text-transform: uppercase;
+      }
+      ion-content{
+        --background: #ffffff;
+       
+      }
+      ion-item{
+        --background: #ffffff;
+        --color: #030303;
+        margin-bottom: 20px  #ffffff;
+      }
+      ion-list{
+        --background: #ffffff;
+      }
+      
